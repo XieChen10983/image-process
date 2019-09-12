@@ -18,9 +18,7 @@ def show_dir_images(root, time=0.3):
     plt.ion()
     plt.cla()
     for image in image_ab_path:
-        print(image)
         image = cv.imdecode(np.fromfile(image, dtype=np.uint8), -1)
-        print(image)
         plt.imshow(image)
         plt.pause(time)
     plt.ioff()
